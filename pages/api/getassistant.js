@@ -8,6 +8,7 @@ export default function handler(req, res) {
          
             const query = req.query.query;
             
+            
         let assistant_id = process.env.ASSISTANT_ID;
         let info = `
          2. Genesis of the Organization
