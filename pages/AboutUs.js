@@ -63,7 +63,7 @@ export default function AboutUs (){
                                 </div>
                                 <div className={styles.newsDiv_block_right}>
                                             <div className={styles.newsDiv_block_right_photo}>
-                                                    <img src="/vision.jpg" className={styles.newsDiv_block_right_photo_image} width={150} height={150}/>
+                                                    <img src="/vision.JPG" className={styles.newsDiv_block_right_photo_image} width={150} height={150}/>
                                             </div>
                                 </div>
                         </div>
