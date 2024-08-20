@@ -1,4 +1,4 @@
-const OpenAI = require('openai');
+import OpenAI from 'openai';
 const fs = require('fs');
 import path from 'path';
 export default function handler(req, res) {
