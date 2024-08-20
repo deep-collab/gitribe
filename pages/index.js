@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const [currentPhoto,setcurrentPhoto] = useState(0);
   const [currentTheme,setcurrentTheme] = useState(0);
-  let photos = ['/real.jpg','/kids.jpg','/water.jpg','/school.jpg','training.jpg'];
+  let photos = ['/real.JPG','/kids.JPG','/water.jpg','/school.JPG','training.JPG'];
   let themes = ['linear-gradient(180deg, #FFF 0%, #419C70 100%)','linear-gradient(180deg, #FFF 0%, #1662D5 62.5%, #2B80BD 83.5%)','linear-gradient(180deg, #FFF 0%, #61A2C6 62.5%, #3A5783 83.5%)','linear-gradient(180deg, #FFF 0%, #ABABAB 62.5%, #BC884C 83.5%)','linear-gradient(180deg, #FFF 0%, #E9AAFF 62.5%, #7F50BC 83.5%)']
   useEffect(()=>{
      
