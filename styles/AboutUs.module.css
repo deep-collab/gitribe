@@ -1,0 +1,317 @@
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Inter';
+    background-color: white;
+}
+.topDiv{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../public/school.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+   
+}
+.infoDiv{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    color: black;
+    margin-bottom: 5rem;
+   
+}
+.infoDiv_block{
+    margin-top: 4.5rem;
+    width: 70%;
+    height: 50%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+}
+.block_left{
+    width: 50%;
+    height: 100%;
+}
+.block_image{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.block_right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.block_right_space{
+    margin-top: 0.5rem;
+    width: 15%;
+    height: 0.25rem;
+    background-color: #419C70;
+}
+.block_right_header{
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+.block_right_bottom{
+    margin-top: 1rem;
+    border: 1px solid black;
+    width: 90%;
+    font-size: 1.5rem;
+    font-weight: 250;
+    line-height: 2rem;
+}
+
+.newsDiv{
+    width: 100vw;
+    height: 105vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  }
+  .newsDiv_top{
+    margin-top: 2.5rem;
+    font-size: 2rem;
+  }
+  .newsDiv_bottom{
+    margin-top: 4rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 80vh;
+   
+    
+  }
+  
+  .newsDiv_block{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    height: 40vh;
+   
+   
+ 
+  }
+  .newsDiv_block_second{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    height: 40vh;
+    background-color: white;
+    
+
+    
+  }
+  .newsDiv_block_left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+   
+  }
+  .newsDiv_block_left_top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .newsDiv_block_header{
+    font-size: 2rem;
+    font-weight: normal;
+  }
+  
+  .newsDiv_block_spacer{
+    margin-top: 0.6rem;
+    width: 20%;
+    height: 0.2rem;
+    background-color: #419C70;
+  }
+  .newsDiv_block_left_bottom{
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 250;
+  }
+  
+  .newsDiv_block_right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .newsDiv_block_right_photo{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 45px black;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+   
+    
+  }
+  .newsDiv_block_right_photo_image{
+   width: 100%;
+   height: 100%;
+   border-top-right-radius: 40px;
+   border-bottom-left-radius: 40px;
+  
+  }
+  .newsDiv_block_second_left{
+    margin-right: 2rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    height: 100%;
+  }
+  .newsDiv_block_second_left_photo{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 45px black;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
+  }
+  .newsDiv_block_second_left_photo_image{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    object-fit: cover;
+  }
+  .newsDiv_block_second_right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsDiv_block_second_right_top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .newsDiv_block_second_right_bottom{
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 250;
+  }
+  .infoDiv_top{
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoDiv_top_header{
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  .infoDiv_spacer{
+    margin-top: 0.5rem;
+    width: 6%;
+    height: 0.2rem;
+    background-color:#419C70;
+  }
+  .infoDiv_top_description{
+    width: 70%;
+    margin-top: 2rem;
+  }
+  .infoDiv_top_paragraph{
+    font-size: 1.5rem;
+    font-weight: 250;
+    line-height: 2.2rem;
+  }
+  .infoDiv_bottom{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .infoDiv_bottom_list{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    font-weight: 250;
+  
+    
+    list-style-type: none;
+  }
+  .galleryHolder{
+    height: 50vh;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    
+  }
+  .galleryHolder_top{
+    width: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .galleryHolder_top_content{
+    width: 70%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    
+  }
+  .galleryHolder_top_header{
+    font-weight: 400;
+  }
+
+  .newsDiv_top_header{
+    font-weight: 500;
+  }
