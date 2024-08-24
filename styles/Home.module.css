@@ -44,7 +44,7 @@
   }
   .topDiv{
     width: 100dvw;
-    height: auto;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
