@@ -5,8 +5,8 @@
     justify-content: space-between;
     align-items: center;
    
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100dvh;
+    min-width: 100dvw;
     background-color: white;
   
   }
@@ -43,8 +43,8 @@
     font-family: var(--font-mono);
   }
   .topDiv{
-    width: 100vw;
-    height: 92vh;
+    width: 100dvw;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +54,7 @@
   
   }
   .topDiv_photoDiv{
-    width: 100vw;
+    width: 100dvw;
     height: 95%;
    
     display: flex;
@@ -193,7 +193,7 @@
   }
   
   .infoDiv{
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -240,7 +240,7 @@
     width: 70%;
   
     margin-top: 4rem;
-    height: 30vh;
+    height: 30dvh;
     display: flex;
     flex-direction: row;
    
@@ -288,8 +288,8 @@
   }
 
   .milestoneDiv{
-    width: 100vw;
-    height: 60vh;
+    width: 100dvw;
+    height: 60dvh;
     background-color: #419C70;
     display: flex;
     align-items: center;
@@ -388,8 +388,8 @@
     
   }
   .newsDiv{
-    width: 100vw;
-    height: 112vh;
+    width: 100dvw;
+    height: 112dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -415,7 +415,7 @@
     flex-direction: row;
     align-items: center;
    
-    height: 40vh;
+    height: 40dvh;
   }
   .newsDiv_block_second{
     margin-top: 4rem;
@@ -424,7 +424,7 @@
     flex-direction: row;
     align-items: center;
    
-    height: 40vh;
+    height: 40dvh;
     background-color: white;
     
   }
@@ -538,8 +538,8 @@
   
   .volunteerDiv{
    
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -562,7 +562,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60vh;
+    height: 60dvh;
     
   }
   .volunteerDiv_bottom_div{
@@ -638,7 +638,7 @@
   .footerDiv{
     margin-top: 4rem;
     width: 100%;
-    height: 48vh;
+    height: 48dvh;
     background-color: #419C70;
   }
   .footerContainer{
@@ -654,8 +654,8 @@
     justify-content: space-between;
     align-items: center;
   
-    min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100dvh;
+    min-width: 100dvw;
     background-color: white;
 
   }
@@ -693,8 +693,8 @@
   }
   .topDiv{
     
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -705,7 +705,7 @@
 
   }
   .topDiv_photoDiv{
-    width: 100vw;
+    width: 100dvw;
     height: 95%;
   
     display: flex;
@@ -815,7 +815,7 @@
   }
 
   .infoDiv{
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -868,7 +868,7 @@
     width: 90%;
   
     margin-top: 4rem;
-    height: 80vh;
+    height: 80dvh;
     display: flex;
     flex-direction: column;
    
@@ -929,7 +929,7 @@
 
 
   .milestoneDiv{
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     background-color: #419C70;
     display: flex;
@@ -1041,7 +1041,7 @@
   }
 
   .newsDiv{
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1052,7 +1052,7 @@
 
   .newsDiv_bottom{
     margin-top: 4rem;
-    height: 140vh;
+    height: 140dvh;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -1198,7 +1198,7 @@
 
   .volunteerDiv{
   
-    width: 100vw;
+    width: 100dvw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1229,7 +1229,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 200vh;
+    height: 200dvh;
    
    
    
@@ -1247,7 +1247,7 @@
   }
   .volunteerDiv_card{
     width: 100%;
-    height: 60vh;
+    height: 60dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1325,7 +1325,7 @@
   .footerDiv{
     margin-top: 4rem;
     width: 100%;
-    height: 48vh;
+    height: 48dvh;
     background-color: #419C70;
   }
   .footerContainer{

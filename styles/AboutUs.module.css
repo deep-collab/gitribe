@@ -528,6 +528,7 @@
     .infoDiv_top_header{
       font-weight: normal;
       font-size: 2rem;
+      text-align: center;
     }
     .infoDiv_spacer{
       margin-top: 0.5rem;
