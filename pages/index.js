@@ -85,6 +85,16 @@ export default function Home() {
                   It conducts public awareness campaigns on the right to education and provides employment-oriented training for Self Help Groups, especially in Pithoragarh and other districts of Uttarakhand like Champawat, Almora, and Bageswar.
                   </p>
                 </div>
+                <div className={styles.infoDiv_founderDiv}>
+                        <div className={styles.infoDiv_founderDiv_left}>
+                              <img src="/founder.jpeg" className={styles.founderDiv_image} width={400} height={250}/>
+                        </div>
+                        <div className={styles.infoDiv_founderDiv_right}>
+                                    <h2 className={styles.founderDiv_header}>Dr Kishor Pant, Founder & President</h2>
+                                    <p className={styles.founderDiv_description}>He has an experience of over 15 years in giving back to the community, and is leading Abhilasha Samiti with the vision of improving lives of people in remote areas of Uttarakhand</p>
+                        </div>
+
+                </div>
             </div>
             
             <div className={styles.milestoneDiv}>
@@ -101,7 +111,7 @@ export default function Home() {
                                       <div className={styles.milestoneDiv_right_top_block}>
                                             <div className={styles.block_top}>
                                                 <img className={styles.block_top_image} src="reading-book.png" width={80} height={80}/>
-                                                <h2 className={styles.block_top_header}>2K +</h2>
+                                                <h2 className={styles.block_top_header}>200 +</h2>
                                             </div>
                                             <div className={styles.block_top_description}>
                                                   <p>admitted to <br/> our school</p>
@@ -110,7 +120,7 @@ export default function Home() {
                                       <div className={styles.milestoneDiv_right_top_block_second}>
                                             <div className={styles.block_top}>
                                                 <img className={styles.block_top_image} src="neighborhood.png" width={80} height={80}/>
-                                                <h2 className={styles.block_top_header}>50 +</h2>
+                                                <h2 className={styles.block_top_header}>120 +</h2>
                                             </div>
                                             <div className={styles.block_top_description}>
                                                   <p>villages were <br/> provided services</p>
@@ -123,7 +133,7 @@ export default function Home() {
                                       <div className={styles.milestoneDiv_right_bottom_block}>
                                             <div className={styles.block_top}>
                                                 <img className={styles.block_top_image} src="group.png" width={80} height={80}/>
-                                                <h2 className={styles.block_top_header}>100 +</h2>
+                                                <h2 className={styles.block_top_header}>150 +</h2>
                                             </div>
                                             <div className={styles.block_top_description}>
                                                   <p>volunteers are<br/> present to serve</p>
@@ -132,7 +142,7 @@ export default function Home() {
                                       <div className={styles.milestoneDiv_right_bottom_block_second}>
                                             <div className={styles.block_top}>
                                                 <img className={styles.block_top_image} src="portfolio.png" width={80} height={80}/>
-                                                <h2 className={styles.block_top_header}>5yrs +</h2>
+                                                <h2 className={styles.block_top_header}>15yrs +</h2>
                                             </div>
                                             <div className={styles.block_top_description}>
                                                   <p>of experience <br/> as organisation</p>
@@ -149,47 +159,48 @@ export default function Home() {
             <div className={styles.newsDiv}>
                   <div className={styles.newsDiv_top}>
 
-                  <h2>What&apos;s new in Abhilasha?</h2>
+                        <h2 className={styles.newsDiv_top_header}>What&apos;s new in Abhilasha?</h2>
 
                   </div>
 
                   <div className={styles.newsDiv_bottom}>
-                  <div className={styles.newsDiv_block}>
-                              <div className={styles.newsDiv_block_left}>
-                                    <div className={styles.newsDiv_block_left_top}>
-                                          <h2 className={styles.newsDiv_block_header}>Our meet at Kashipur</h2>
-                                          <div className={styles.newsDiv_block_spacer}></div>
-                                    </div>
+                              <div className={styles.newsDiv_block}>
+                                          <div className={styles.newsDiv_block_left}>
+                                                <div className={styles.newsDiv_block_left_top}>
+                                                      <h2 className={styles.newsDiv_block_header}>Our meet at Kashipur</h2>
+                                                      <div className={styles.newsDiv_block_spacer}></div>
+                                                </div>
 
-                                    <div className={styles.newsDiv_block_left_bottom}>
-                                          <p>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
-                                    </div>
-                              </div>
-                              <div className={styles.newsDiv_block_right}>
-                                          <div className={styles.newsDiv_block_right_photo}>
-                                                <img src="/meeting.jpg" className={styles.newsDiv_block_right_photo_image} width={150} height={150}/>
+                                                <div className={styles.newsDiv_block_left_bottom}>
+                                                      <p>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
+                                                </div>
                                           </div>
-                              </div>
-                  </div>
-                  <div className={styles.newsDiv_block_second}>
-                              <div className={styles.newsDiv_block_second_left}>
-                                          <div className={styles.newsDiv_block_second_left_photo}>
-                                                <img src="/office.jpg" className={styles.newsDiv_block_second_left_photo_image} width={150} height={150}/>
+                                          <div className={styles.newsDiv_block_right}>
+                                                      <div className={styles.newsDiv_block_right_photo}>
+                                                            <img src="/meeting.jpg" className={styles.newsDiv_block_right_photo_image} width={150} height={150}/>
+                                                      </div>
                                           </div>
                               </div>
 
-                              <div className={styles.newsDiv_block_second_right}>
-                                    <div className={styles.newsDiv_block_second_right_top}>
-                                          <h2 className={styles.newsDiv_block_header}>New office at Haldwani</h2>
-                                          <div className={styles.newsDiv_block_spacer}></div>
-                                    </div>
+                              <div className={styles.newsDiv_block_second}>
+                                          <div className={styles.newsDiv_block_second_left}>
+                                                      <div className={styles.newsDiv_block_second_left_photo}>
+                                                            <img src="/office.jpg" className={styles.newsDiv_block_second_left_photo_image} width={150} height={150}/>
+                                                      </div>
+                                          </div>
 
-                                    <div className={styles.newsDiv_block_second_right_bottom}>
-                                          <p>We recently opened a new office in Haldwani, where we will provide training to upskill the youth with in-demand skills.</p>
-                                    </div>
+                                          <div className={styles.newsDiv_block_second_right}>
+                                                <div className={styles.newsDiv_block_second_right_top}>
+                                                      <h2 className={styles.newsDiv_block_header}>New office at Haldwani</h2>
+                                                      <div className={styles.newsDiv_block_spacer}></div>
+                                                </div>
+
+                                                <div className={styles.newsDiv_block_second_right_bottom}>
+                                                      <p>We recently opened a new office in Haldwani, where we will provide training to upskill the youth with in-demand skills.</p>
+                                                </div>
+                                          </div>
+                                          
                               </div>
-                              
-                        </div>
 
                   </div>
 
@@ -199,7 +210,7 @@ export default function Home() {
 
                   <div className={styles.volunteerDiv_spacer}></div>
                   <div className={styles.volunteerDiv_top}>
-                              <h2>Abhilasha Needs You</h2>
+                              <h2 className={styles.volunteerDiv_top_header}>Abhilasha Needs You</h2>
                   </div>
                   <div className={styles.volunteerDiv_bottom}>
                         <div className={styles.volunteerDiv_bottom_div}>
@@ -246,12 +257,14 @@ export default function Home() {
                         </div>
                         
                   </div>
-                  <div className={styles.footerContainer}>
-                               <Footer/>
-                  </div>
+                 
             
                  
 
+            </div>
+
+            <div className={styles.footerContainer}>
+                               <Footer/>
             </div>
             
 

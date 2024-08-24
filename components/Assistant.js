@@ -104,7 +104,7 @@ export default function Assistant (){
     return(
         <>
             {showChat ? 
-                <button className={styles.chat} >
+                <div className={styles.chat} >
                     <div className={styles.chat_topDiv}>
                         <div className={styles.chat_topDiv_left}>
                             <img  className={styles.assistantImage} src='/webSeva.jpg' width={35} height={35}/>
@@ -112,7 +112,7 @@ export default function Assistant (){
                         </div>
                         <div className={styles.chat_topDiv_right}>
                                 <button className={styles.closeButton} onClick={()=>{setShowChat(false)}}>
-                                    <img src='/close.png' width={15} height={15}/>
+                                    <img className={styles.closeImage} src='/close.png' width={15} height={15}/>
                                 </button>
                         </div>
                     </div>
@@ -144,7 +144,7 @@ export default function Assistant (){
                         </button> */}
                     </div>
 
-                </button>:
+                </div>:
                 <button className={styles.container} onClick={()=>{setShowChat(true);}}>
                      <img src='/conversation.png' className={styles.image} width={25} height={25}/>
                 </button>

@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 const fs = require('fs');
 import path from 'path';
 export default function handler(req, res) {
-    const openai = new OpenAI({apiKey:process.env.OPENAI_KEY,dangerouslyAllowBrowser:true});
+    const openai = new OpenAI({apiKey:process.env.OPENAI_KEY});
     const message = async ()=>{
         try{
          

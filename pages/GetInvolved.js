@@ -22,7 +22,7 @@ export default function GetInvolved (){
                         
                     <div className={styles.newsDiv}>
                         <div className={styles.newsDiv_top}>
-                            <h2>Get Involved</h2>
+                            <h2 className={styles.newsDiv_top_header}>Get Involved</h2>
                         </div>
                         <div className={styles.newsDiv_bottom}>
                         
@@ -79,7 +79,7 @@ export default function GetInvolved (){
                                                             </button>
                                                     </div>
                                             </div>
-                                            {/* <br/> we run a school and implement various  developmental activities in 50 villages,  aiming to provide quality education  and reduce rural migration. */}
+                                            {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
                                 </div>
 
                                 <div className={styles.newsDiv_block}>

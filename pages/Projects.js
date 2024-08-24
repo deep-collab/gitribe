@@ -22,7 +22,7 @@ export default function Projects (){
                     <div className={styles.newsDiv}>
                             <div className={styles.newsDiv_top}>
 
-                                        <h2>Projects by Abhilasha</h2>
+                                        <h2 className={styles.newsDiv_top_header}>Projects by Abhilasha</h2>
 
                             </div>
                             <div className={styles.newsDiv_bottom}>
@@ -41,11 +41,11 @@ export default function Projects (){
                                                         </div>
 
                                                         <div className={styles.newsDiv_block_second_right_bottom}>
-                                                            <p>Our mission is to improve the lives of people in remote Pithoragarh, Uttarakhand.</p>
+                                                            <p>Secure Himalaya Project in Dharchula promoted snow leopard conservation and explored local job opportunities in eco-tourism, herb and wool production.</p>
                                                         </div>
                                                 </div>
                                                 
-                                                {/* <br/> we run a school and implement various  developmental activities in 50 villages,  aiming to provide quality education  and reduce rural migration. */}
+                                                {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
                                     </div>
                                     <div className={styles.newsDiv_block}>
                                             <div className={styles.newsDiv_block_left}>
@@ -55,7 +55,7 @@ export default function Projects (){
                                                     </div>
 
                                                     <div className={styles.newsDiv_block_left_bottom}>
-                                                        <p>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
+                                                        <p>A Strong Seed Management Training Program under PMKSY 2.0 was held in Gangolihat, including visits to rural and water sources.</p>
                                                     </div>
                                             </div>
                                             <div className={styles.newsDiv_block_right}>
@@ -78,11 +78,11 @@ export default function Projects (){
                                                         </div>
 
                                                         <div className={styles.newsDiv_block_second_right_bottom}>
-                                                            <p>Our mission is to improve the lives of people in remote Pithoragarh, Uttarakhand.</p>
+                                                            <p>An accounting training workshop under PMKSY 2.0 was held in Dasaithal, Gangolihat, for Gram Panchayat staff and implementation committee members, with 30 participants.</p>
                                                         </div>
                                                 </div>
                                                 
-                                                {/* <br/> we run a school and implement various  developmental activities in 50 villages,  aiming to provide quality education  and reduce rural migration. */}
+                                                {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
                                     </div>
                                     <div className={styles.newsDiv_block}>
                                             <div className={styles.newsDiv_block_left}>
@@ -92,7 +92,7 @@ export default function Projects (){
                                                     </div>
 
                                                     <div className={styles.newsDiv_block_left_bottom}>
-                                                        <p>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
+                                                        <p>A workshop in Berinag trained 25 women from the Shiv Shakti Self Help Group in nursery development under the Women Component Project.</p>
                                                     </div>
                                             </div>
                                             <div className={styles.newsDiv_block_right}>
@@ -119,7 +119,7 @@ export default function Projects (){
                                                         </div>
                                                 </div>
                                                 
-                                                {/* <br/> we run a school and implement various  developmental activities in 50 villages,  aiming to provide quality education  and reduce rural migration. */}
+                                                {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
                                     </div>
                                     <div className={styles.newsDiv_block}>
                                             <div className={styles.newsDiv_block_left}>

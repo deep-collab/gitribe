@@ -93,12 +93,7 @@ export default function AboutUs (){
                                 <div className={styles.infoDiv_spacer}></div>
                                 <div className={styles.infoDiv_top_description}>
                                     <p className={styles.infoDiv_top_paragraph}>At ABHILASHA SAMITI, we encourage the following values to be upheld both individually and organizationally:
-                                       
-                                       
-                                       
-                                        
-                                        
-                                        
+
                                         </p>
                                     <ul className={styles.infoDiv_bottom_list}>
                                         <li>Honesty</li>
