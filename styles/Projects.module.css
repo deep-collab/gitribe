@@ -248,7 +248,7 @@
     flex-direction: column;
     align-items: center;
   
-    height: 60vh;
+    height: auto;
     background-color: white;
     margin-top: 4rem;
    
@@ -263,7 +263,8 @@
     align-items: center;
     justify-content: center;
   
-    height: 50%;
+    height: 32vh;
+   
    
    
   }
@@ -334,7 +335,7 @@
     flex-direction: column-reverse;
     align-items: center;
   
-    height: 60vh;
+    height: auto;
  
   
   }
@@ -378,7 +379,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50%;
+    height: 32vh;
   }
   .newsDiv_block_right_photo{
     width: 95%;
