@@ -168,7 +168,9 @@
     line-height: 2.4rem;
     font-weight: 250;
   }
-  
+  .newsDiv_block_paragraph{
+    font-weight: 250;
+  }
   .newsDiv_block_right{
     width: 50%;
     display: flex;
@@ -482,6 +484,9 @@
      
      
     }
+    .newsDiv_block_paragraph{
+      font-weight: 250;
+    }
     .newsDiv_block_left{
       width: 100%;
       height: auto;
@@ -570,7 +575,7 @@
     }
     .infoDiv_top_paragraph{
       font-size: 1.5rem;
-      font-weight: 400;
+      font-weight: 250;
       line-height: 2.2rem;
       text-align: center;
     }

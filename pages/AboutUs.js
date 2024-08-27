@@ -44,7 +44,7 @@ export default function AboutUs (){
                                             </div>
 
                                             <div className={styles.newsDiv_block_second_right_bottom}>
-                                                <p>Our mission is to improve the lives of people in remote Pithoragarh, Uttarakhand.</p>
+                                                <p className={styles.newsDiv_block_paragraph}>Our mission is to improve the lives of people in remote Pithoragarh, Uttarakhand.</p>
                                             </div>
                                     </div>
                                     {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
@@ -58,7 +58,7 @@ export default function AboutUs (){
                                         </div>
 
                                         <div className={styles.newsDiv_block_left_bottom}>
-                                            <p>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
+                                            <p className={styles.newsDiv_block_paragraph}>We recently had our big meet-up at Kashipur with over 120 + schools joining on shared vision of making education more accessible</p>
                                         </div>
                                 </div>
                                 <div className={styles.newsDiv_block_right}>
