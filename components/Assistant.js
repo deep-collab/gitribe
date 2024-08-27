@@ -11,7 +11,7 @@ export default function Assistant (){
     async function open() {
         if (query) {
             let fullMessage = '';
-            console.log(query);
+          
             const eventSource = new EventSource(`/api/getassistant?query=${String(query)}`);
             // setQuery('');
       
@@ -20,7 +20,7 @@ export default function Assistant (){
       if (data === '[DONE]') {
         setTyping(false);
         eventSource.close();
-        console.log(fullMessage);
+       
         setMessages(prev => [...prev, fullMessage]);
       
       } else if (data === '[ERROR]') {
@@ -31,10 +31,10 @@ export default function Assistant (){
         try {
           const parsedData = JSON.parse(data);
           if (parsedData.type === 'textCreated' || parsedData.type === 'textDelta') {
-            console.log(parsedData);
+          
             if(parsedData.textDelta){
                 fullMessage += parsedData.textDelta.value  ;
-                console.log(parsedData.textDelta.value)
+          
                 // setMessages(prev => [...prev, parsedData.textDelta.value || parsedData.text.value]);
 
               

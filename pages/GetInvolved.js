@@ -39,10 +39,10 @@ export default function GetInvolved (){
 
                                                 <div className={styles.newsDiv_block_left_button}>
                                                     <button className={styles.donateButton}>
-                                                    <p className={styles.donateButton_paragraph}>Donate Now</p>
-                                                    <div className={styles.donateButton_arrow}>
-                                                            <img src="/next.png" width={20} height={20}/>
-                                                    </div>
+                                                        <p className={styles.donateButton_paragraph}>Donate Now</p>
+                                                        <div className={styles.donateButton_arrow}>
+                                                                <img src="/next.png" width={20} height={20}/>
+                                                        </div>
                                                     </button>
                                                 </div>
                                         </div>

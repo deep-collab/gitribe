@@ -101,7 +101,7 @@ ORGANIZATION PROFILE ABHILASHA SAMITI, PITHORAGARH
             
             }
         );
-        console.log(message);
+      
 
 
 
