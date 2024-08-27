@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import styles from '@/styles/GetInvolved.module.css';
 import Assistant from "@/components/Assistant";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 export default function GetInvolved (){
     return(
         <>
@@ -71,12 +72,12 @@ export default function GetInvolved (){
                                                         <p>Join our team of volunteers and help drive our mission forward with your valuable contribution.</p>
                                                     </div>
                                                     <div className={styles.newsDiv_block_second_right_button}>
-                                                            <button className={styles.applyButton}>
+                                                            <Link className={styles.applyButton} href='https://forms.gle/CZnHjuRESBP3zYMG9'target="on_blank">
                                                                     <p className={styles.donateButton_paragraph}>Apply Now</p>
                                                                     <div className={styles.donateButton_arrow}>
                                                                             <img src="/green-next.png" width={20} height={20}/>
                                                                     </div>
-                                                            </button>
+                                                            </Link>
                                                     </div>
                                             </div>
                                             {/* <br/> we run a school and implement various developmental activities in 50 villages, aiming to provide quality education and reduce rural migration. */}
@@ -94,12 +95,12 @@ export default function GetInvolved (){
                                                 </div>
 
                                                 <div className={styles.newsDiv_block_left_button}>
-                                                    <button className={styles.internButton}>
+                                                    <Link className={styles.internButton} href={'https://forms.gle/WzQoVMGaQJq7KAUh8'} target="on_blank">
                                                     <p className={styles.donateButton_paragraph}>Intern Now</p>
                                                     <div className={styles.donateButton_arrow}>
                                                             <img src="/intern-next.png" width={20} height={20}/>
                                                     </div>
-                                                    </button>
+                                                    </Link>
                                                 </div>
                                         </div>
                                         <div className={styles.newsDiv_block_right}>

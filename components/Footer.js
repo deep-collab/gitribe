@@ -15,16 +15,16 @@ export default function Footer (){
                 </div>
                 <div className={styles.footerDiv_top_right}>
                     <div className={styles.link_list}>
-                            <Link href={'/Volunteer'} className={styles.link}>
+                            <Link href={'https://forms.gle/CZnHjuRESBP3zYMG9'} className={styles.link} target='on_blank'>
                                 Volunteer
                             </Link>
-                            <Link href={'/Volunteer'} className={styles.link}>
+                            <Link href={'/Volunteer'} className={styles.link} target='on_blank'>
                                 Donate
                             </Link>
-                            <Link href={'/Volunteer'} className={styles.link}>
+                            <Link href={'https://forms.gle/WzQoVMGaQJq7KAUh8'} className={styles.link} target='on_blank'>
                                 Intern
                             </Link>
-                            <Link href={'/Volunteer'} className={styles.link}>
+                            <Link href={'https://maps.app.goo.gl/K4ubxyUtebVNjRRi6'} className={styles.link} target='on_blank'>
                                 Directions
                             </Link>
                     </div>
@@ -32,7 +32,7 @@ export default function Footer (){
                             <Link href={'/AboutUs'} className={styles.link}>
                                 About Us
                             </Link>
-                            <Link href={'/Contact Us'} className={styles.link}>
+                            <Link href={'/ContactUs'} className={styles.link}>
                                 Contact Us
                             </Link>
                             <Link href={'/Projects'} className={styles.link}>
@@ -53,9 +53,14 @@ export default function Footer (){
                     <div className={styles.footerDiv_bottom_right}>
                         
                         
-                        
-                            <img src='/linkedin.png' className={styles.social_image} width={30} height={30}/>  
+
+                        <Link href={'https://www.linkedin.com/company/abhilasha-samiti/'} target='on_blank'>
+                             <img src='/linkedin.png' className={styles.social_image} width={30} height={30}/>  
+                        </Link>
+                        <Link href={'https://www.facebook.com/profile.php?id=100087221847575'} target='on_blank'>
                             <img src='/facebook.png' className={styles.social_image} width={30} height={30}/>
+                        </Link>
+                            
                             <img src='/instagram.png' className={styles.social_image} width={30} height={30}/>
                             <img src='/social.png' className={styles.social_image} width={30} height={30}/>
                             

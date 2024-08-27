@@ -235,7 +235,7 @@ export default function Home() {
                                          
                                     </div>
                                     <div className={styles.volunteerDiv_card_bottom}>
-                                                <Link href={""} className={styles.volunteerDiv_card_button}>
+                                                <Link href={"https://forms.gle/CZnHjuRESBP3zYMG9"} className={styles.volunteerDiv_card_button} target="on_blank">
                                                       <h2 className={styles.volunteerDiv_card_button_text}>Join</h2>
                                                 </Link>
                                           </div>
@@ -243,13 +243,13 @@ export default function Home() {
                               </div>
                               <div className={styles.volunteerDiv_card}>
                                     <div className={styles.volunteerDiv_card_top}>
-                                          <img src="/donate.png" width={140} height={140}/>
+                                          <img src="/intern.png" width={140} height={140}/>
                                           <h2 className={styles.volunteerDiv_card_header_last}>INTERN</h2>
                                           <p className={styles.volunteerDiv_card_paragraph}>Gain valuable experience <br/> Apply now for our<br/>internship program</p>
                                     </div>
                                   
                                     <div className={styles.volunteerDiv_card_bottom}>
-                                          <Link href={""} className={styles.volunteerDiv_card_button}>
+                                          <Link href={"https://forms.gle/WzQoVMGaQJq7KAUh8"} className={styles.volunteerDiv_card_button} target="on_blank">
                                                 <h2 className={styles.volunteerDiv_card_button_text}>Apply</h2>
                                           </Link>
                                     </div>

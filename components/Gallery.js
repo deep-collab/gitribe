@@ -20,6 +20,11 @@ export default function Gallery () {
                     <img src='/projects.jpg' className={styles.galleryImage} width={150} height={200}/>
                     <img src='/forest.jpg' className={styles.galleryImage} width={150} height={200}/>
                     <img src='/mission.jpg' className={styles.galleryImage} width={150} height={200}/>
+                    <img src='/securerhimalaya.png' className={styles.galleryImage} width={150} height={200}/>
+                    <img src='/WomenComponent.png' className={styles.galleryImage} width={150} height={200}/>
+                    <img src='/CapacityBuildup.png' className={styles.galleryImage} width={150} height={200}/>
+                    <img src='/AccountingTraining.png' className={styles.galleryImage} width={150} height={200}/>
+
                 </div>
               
         </div>

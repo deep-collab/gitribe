@@ -107,7 +107,7 @@ export default function Assistant (){
                 <div className={styles.chat} >
                     <div className={styles.chat_topDiv}>
                         <div className={styles.chat_topDiv_left}>
-                            <img  className={styles.assistantImage} src='/webSeva.jpg' width={35} height={35}/>
+                            <img  className={styles.assistantImage} src='/sparkle.png' width={35} height={35}/>
                              <p className={styles.assistantName}>WebSeva Ai</p>
                         </div>
                         <div className={styles.chat_topDiv_right}>
@@ -119,7 +119,7 @@ export default function Assistant (){
                     <div className={styles.chat_middleDiv}>
                       
                         <div className={styles.chat_middleDiv_body}>
-                            <img src='/webSeva.jpg' className={styles.assistantLogo} width={30} height={30}/>
+                            <img src='/sparkle.png' className={styles.assistantLogo} width={30} height={30}/>
                             <div className={styles.chat_middleDiv_subbody}>
                             {messages.length > 0 && (
                                   <p>{messages[messages.length - 1]}</p> // Show the last concatenated message
