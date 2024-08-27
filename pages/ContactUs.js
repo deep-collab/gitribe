@@ -95,7 +95,7 @@ export default function ContactUs (){
 
                                                                         <div className={styles.form_left_submit}>
                                                                                 <button className={styles.submitButton} onClick={sendEmail}>
-                                                                                    Send Message
+                                                                                    <p className={styles.submitButton_text}>Send Message</p>
                                                                                 </button>
                                                                         </div>
                                                             </div>
