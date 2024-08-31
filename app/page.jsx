@@ -5,11 +5,31 @@ import Ripple from "@/components/magicui/ripple";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import GradualSpacing from "@/components/magicui/gradual-spacing";
 import ShinyButton from "@/components/magicui/shiny-button";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { Drawer } from 'vaul';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import Link from "next/link"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
 
 export default function HeroSectionSimpleCentred() {
   return (
@@ -27,8 +47,11 @@ export default function HeroSectionSimpleCentred() {
         )}
       >
         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Gitribe</span>
-          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          <span className=" flex gap-[10px] justify-center items-center">
+          ✨ Introducing Gitribe
+            <ArrowRightIcon className=" size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+            </span>
+          
         </AnimatedShinyText>
       </div>
     </div>
@@ -62,45 +85,60 @@ export default function HeroSectionSimpleCentred() {
               <Drawer.Content className="bg-gray-100 flex z-20 flex-col rounded-t-[10px] h-full mt-24 max-h-[96%] fixed bottom-0 left-0 right-0">
                 <div className="p-4 bg-white rounded-t-[10px] flex-1">
                   <Drawer.Handle className="bg-gray-300 mb-8" />
-                  <div className="max-w-md mx-auto">
-                    <Drawer.Title className="font-medium text-[black] mb-4">Drawer for React.</Drawer.Title>
-                    <p className="text-gray-600 mb-2">
-                      This component can be used as a Dialog replacement on mobile and tablet devices. You can read
-                      about why and how it was built{' '}
-                      <a
-                        target="_blank"
-                        className="underline"
-                        href="https://emilkowal.ski/ui/building-a-drawer-component"
-                      >
-                        here
-                      </a>
-                      .
-                    </p>
-                    <p className="text-gray-600 mb-2">
-                      It comes unstyled, has gesture-driven animations, and is made by{' '}
-                      <a href="https://emilkowal.ski/" className="underline" target="_blank">
-                        Emil Kowalski
-                      </a>
-                      .
-                    </p>
-                    <p className="text-gray-600 mb-8">
-                      It uses{' '}
-                      <a
-                        href="https://www.radix-ui.com/docs/primitives/components/dialog"
-                        className="underline"
-                        target="_blank"
-                      >
-                        Radix's Dialog primitive
-                      </a>{' '}
-                      under the hood and is inspired by{' '}
-                      <a
-                        href="https://twitter.com/devongovett/status/1674470185783402496"
-                        className="underline"
-                        target="_blank"
-                      >
-                        this tweet.
-                      </a>
-                    </p>
+                  <div className="max-w-md light mx-auto">
+                    <Drawer.Title className="font-medium text-[black] mb-4"></Drawer.Title>
+                    <Card className="mx-auto max-w-sm">
+      <CardHeader>
+        <CardTitle className="text-xl">Join Now</CardTitle>
+        <CardDescription>
+          Enter your information to Join waitlist
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="grid gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="first-name">First name</Label>
+              <Input id="first-name" placeholder="Deep" required />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="last-name">Last name</Label>
+              <Input id="last-name" placeholder="Shelby" required />
+            </div>
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="deep@example.com"
+              required
+            />
+          </div>
+          <Select>
+      <SelectTrigger className="">
+        <SelectValue placeholder="Select Your Occupation" />
+      </SelectTrigger>
+      <SelectContent className="light">
+        <SelectGroup>
+          <SelectLabel>Occupation&apos;s</SelectLabel>
+          <SelectItem value="apple">Working Professional</SelectItem>
+          <SelectItem value="banana">Student</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+          <Button type="submit" className="w-full">
+            Join Waitlist
+          </Button>
+        </div>
+        <div className="mt-4 text-center text-sm">
+          Trouble Joining Waitlist?{" "}
+          <Link href="https://discord.gg/YP7kG9Pc" className="underline">
+            Report
+          </Link>
+        </div>
+      </CardContent>
+    </Card>
                   </div>
                 </div>
                 <div className="p-4 bg-gray-100 border-t border-gray-200 mt-auto">
@@ -161,10 +199,7 @@ export default function HeroSectionSimpleCentred() {
           </div>
           {/* End Buttons */}
           <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
-            <span className="text-sm text-muted-foreground">
-              Launch Date:
-            </span>
-            <span className="text-sm font-bold">19 Sep 2024 </span>
+            <span className="text-sm font-bold">Coming soon...</span>
             <svg
               className="h-5 w-5 text-muted-foreground"
               width={16}
