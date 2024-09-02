@@ -29,9 +29,70 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { useState } from 'react';
 
 
 export default function HeroSectionSimpleCentred() {
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    occupation: '',
+  });
+
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
+  };
+
+  const handleSelectChange = (value) => {
+    setFormData((prevData) => ({ ...prevData, occupation: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    if (!formData.firstName || !formData.email || !formData.occupation) {
+      setError("Please fill in all required fields.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      const result = await response.json();
+      alert('Success! ' + result.message);
+      // Reset form fields
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        occupation: '',
+      });
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+  
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
             
@@ -95,15 +156,28 @@ export default function HeroSectionSimpleCentred() {
         </CardDescription>
       </CardHeader>
       <CardContent>
+      <form onSubmit={handleSubmit}>
         <div className="grid gap-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="first-name">First name</Label>
-              <Input id="first-name" placeholder="Deep" required />
+              <Label htmlFor="firstName">First name</Label>
+              <Input
+                id="firstName"
+                placeholder="Deep"
+                required
+                value={formData.firstName}
+                onChange={handleChange}
+              />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="last-name">Last name</Label>
-              <Input id="last-name" placeholder="Shelby" required />
+              <Label htmlFor="lastName">Last name</Label>
+              <Input
+                id="lastName"
+                placeholder="Shelby"
+                required
+                value={formData.lastName}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className="grid gap-2">
@@ -113,31 +187,35 @@ export default function HeroSectionSimpleCentred() {
               type="email"
               placeholder="deep@example.com"
               required
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
-          <Select>
-      <SelectTrigger className="">
-        <SelectValue placeholder="Select Your Occupation" />
-      </SelectTrigger>
-      <SelectContent className="light">
-        <SelectGroup>
-          <SelectLabel>Occupation&apos;s</SelectLabel>
-          <SelectItem value="apple">Working Professional</SelectItem>
-          <SelectItem value="banana">Student</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-          <Button type="submit" className="w-full">
-            Join Waitlist
+          <Select onValueChange={handleSelectChange}>
+            <SelectTrigger>
+              <SelectValue placeholder="Select Your Occupation" />
+            </SelectTrigger>
+            <SelectContent className="light">
+              <SelectGroup>
+                <SelectLabel>Occupation</SelectLabel>
+                <SelectItem value="Working Professional">Working Professional</SelectItem>
+                <SelectItem value="Student">Student</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+          <Button type="submit" className="w-full" disabled={loading}>
+            {loading ? 'Submitting...' : 'Join Waitlist'}
           </Button>
+          {error && <p className="text-red-500 mt-2">{error}</p>}
         </div>
-        <div className="mt-4 text-center text-sm">
-          Trouble Joining Waitlist?{" "}
-          <Link href="https://discord.gg/YP7kG9Pc" className="underline">
-            Report
-          </Link>
-        </div>
-      </CardContent>
+      </form>
+      <div className="mt-4 text-center text-sm">
+        Trouble Joining Waitlist?{' '}
+        <Link href="https://discord.gg/YP7kG9Pc" className="underline">
+          Report
+        </Link>
+      </div>
+    </CardContent>
     </Card>
                   </div>
                 </div>
@@ -145,7 +223,7 @@ export default function HeroSectionSimpleCentred() {
                   <div className="flex gap-6 justify-end max-w-md mx-auto">
                     <a
                       className="text-xs text-gray-600 flex items-center gap-0.25"
-                      href="https://github.com/emilkowalski/vaul"
+                      href="https://github.com/deep-collab/gitribe"
                       target="_blank"
                     >
                       GitHub
@@ -168,7 +246,7 @@ export default function HeroSectionSimpleCentred() {
                     </a>
                     <a
                       className="text-xs text-gray-600 flex items-center gap-0.25"
-                      href="https://twitter.com/emilkowalski_"
+                      href="https://twitter.com/dpkshetti"
                       target="_blank"
                     >
                       Twitter
