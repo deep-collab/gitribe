@@ -5,13 +5,94 @@ import Ripple from "@/components/magicui/ripple";
 import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import GradualSpacing from "@/components/magicui/gradual-spacing";
 import ShinyButton from "@/components/magicui/shiny-button";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import { Drawer } from 'vaul';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import Link from "next/link"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { useState } from 'react';
+
 
 export default function HeroSectionSimpleCentred() {
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    occupation: '',
+  });
+
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [id]: value }));
+  };
+
+  const handleSelectChange = (value) => {
+    setFormData((prevData) => ({ ...prevData, occupation: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    if (!formData.firstName || !formData.email || !formData.occupation) {
+      setError("Please fill in all required fields.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      const result = await response.json();
+      alert('Success! ' + result.message);
+      // Reset form fields
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        occupation: '',
+      });
+    } catch (err) {
+      setError('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+  
   return (
     <div className="relative flex h-screen w-full items-center justify-center overflow-hidden rounded-lg border bg-background p-20 md:shadow-xl">
             
@@ -27,8 +108,11 @@ export default function HeroSectionSimpleCentred() {
         )}
       >
         <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span>✨ Introducing Gitribe</span>
-          <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          <span className=" flex gap-[10px] justify-center items-center">
+          ✨ Introducing Gitribe
+            <ArrowRightIcon className=" size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+            </span>
+          
         </AnimatedShinyText>
       </div>
     </div>
@@ -62,52 +146,84 @@ export default function HeroSectionSimpleCentred() {
               <Drawer.Content className="bg-gray-100 flex z-20 flex-col rounded-t-[10px] h-full mt-24 max-h-[96%] fixed bottom-0 left-0 right-0">
                 <div className="p-4 bg-white rounded-t-[10px] flex-1">
                   <Drawer.Handle className="bg-gray-300 mb-8" />
-                  <div className="max-w-md mx-auto">
-                    <Drawer.Title className="font-medium text-[black] mb-4">Drawer for React.</Drawer.Title>
-                    <p className="text-gray-600 mb-2">
-                      This component can be used as a Dialog replacement on mobile and tablet devices. You can read
-                      about why and how it was built{' '}
-                      <a
-                        target="_blank"
-                        className="underline"
-                        href="https://emilkowal.ski/ui/building-a-drawer-component"
-                      >
-                        here
-                      </a>
-                      .
-                    </p>
-                    <p className="text-gray-600 mb-2">
-                      It comes unstyled, has gesture-driven animations, and is made by{' '}
-                      <a href="https://emilkowal.ski/" className="underline" target="_blank">
-                        Emil Kowalski
-                      </a>
-                      .
-                    </p>
-                    <p className="text-gray-600 mb-8">
-                      It uses{' '}
-                      <a
-                        href="https://www.radix-ui.com/docs/primitives/components/dialog"
-                        className="underline"
-                        target="_blank"
-                      >
-                        Radix's Dialog primitive
-                      </a>{' '}
-                      under the hood and is inspired by{' '}
-                      <a
-                        href="https://twitter.com/devongovett/status/1674470185783402496"
-                        className="underline"
-                        target="_blank"
-                      >
-                        this tweet.
-                      </a>
-                    </p>
+                  <div className="max-w-md light mx-auto">
+                    <Drawer.Title className="font-medium text-[black] mb-4"></Drawer.Title>
+                    <Card className="mx-auto max-w-sm">
+      <CardHeader>
+        <CardTitle className="text-xl">Join Now</CardTitle>
+        <CardDescription>
+          Enter your information to Join waitlist
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+      <form onSubmit={handleSubmit}>
+        <div className="grid gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-2">
+              <Label htmlFor="firstName">First name</Label>
+              <Input
+                id="firstName"
+                placeholder="Deep"
+                required
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="grid gap-2">
+              <Label htmlFor="lastName">Last name</Label>
+              <Input
+                id="lastName"
+                placeholder="Shelby"
+                required
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="deep@example.com"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <Select onValueChange={handleSelectChange}>
+            <SelectTrigger>
+              <SelectValue placeholder="Select Your Occupation" />
+            </SelectTrigger>
+            <SelectContent className="light">
+              <SelectGroup>
+                <SelectLabel>Occupation</SelectLabel>
+                <SelectItem value="Working Professional">Working Professional</SelectItem>
+                <SelectItem value="Student">Student</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
+          <Button type="submit" className="w-full" disabled={loading}>
+            {loading ? 'Submitting...' : 'Join Waitlist'}
+          </Button>
+          {error && <p className="text-red-500 mt-2">{error}</p>}
+        </div>
+      </form>
+      <div className="mt-4 text-center text-sm">
+        Trouble Joining Waitlist?{' '}
+        <Link href="https://discord.gg/YP7kG9Pc" className="underline">
+          Report
+        </Link>
+      </div>
+    </CardContent>
+    </Card>
                   </div>
                 </div>
                 <div className="p-4 bg-gray-100 border-t border-gray-200 mt-auto">
                   <div className="flex gap-6 justify-end max-w-md mx-auto">
                     <a
                       className="text-xs text-gray-600 flex items-center gap-0.25"
-                      href="https://github.com/emilkowalski/vaul"
+                      href="https://github.com/deep-collab/gitribe"
                       target="_blank"
                     >
                       GitHub
@@ -130,7 +246,7 @@ export default function HeroSectionSimpleCentred() {
                     </a>
                     <a
                       className="text-xs text-gray-600 flex items-center gap-0.25"
-                      href="https://twitter.com/emilkowalski_"
+                      href="https://twitter.com/dpkshetti"
                       target="_blank"
                     >
                       Twitter
@@ -161,10 +277,7 @@ export default function HeroSectionSimpleCentred() {
           </div>
           {/* End Buttons */}
           <div className="mt-5 flex justify-center items-center gap-x-1 sm:gap-x-3">
-            <span className="text-sm text-muted-foreground">
-              Launch Date:
-            </span>
-            <span className="text-sm font-bold">19 Sep 2024 </span>
+            <span className="text-sm font-bold">Coming soon...</span>
             <svg
               className="h-5 w-5 text-muted-foreground"
               width={16}

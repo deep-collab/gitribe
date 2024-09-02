@@ -1,5 +1,5 @@
-"use client";;
-import { useEffect, useId, useRef, useState } from "react";
+"use client";
+import { useEffect, useId, useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -22,22 +22,20 @@ export function GridPattern({
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [squares, setSquares] = useState(() => generateSquares(numSquares));
 
-  function getPos() {
+  const getPos = useCallback(() => {
     return [
       Math.floor((Math.random() * dimensions.width) / width),
       Math.floor((Math.random() * dimensions.height) / height),
     ];
-  }
+  }, [dimensions, width, height]);
 
-  // Adjust the generateSquares function to return objects with an id, x, and y
-  function generateSquares(count) {
+  const generateSquares = useCallback((count) => {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
       pos: getPos(),
     }));
-  }
+  }, [getPos]);
 
-  // Function to update a single square's position
   const updateSquarePosition = (id) => {
     setSquares((currentSquares) =>
       currentSquares.map((sq) =>
@@ -46,17 +44,17 @@ export function GridPattern({
               ...sq,
               pos: getPos(),
             }
-          : sq));
+          : sq
+      )
+    );
   };
 
-  // Update squares to animate in
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
-  }, [dimensions, numSquares]);
+  }, [dimensions, numSquares, generateSquares]);
 
-  // Resize observer to update container dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
@@ -67,19 +65,21 @@ export function GridPattern({
       }
     });
 
-    if (containerRef.current) {
-      resizeObserver.observe(containerRef.current);
+    const container = containerRef.current;
+
+    if (container) {
+      resizeObserver.observe(container);
     }
 
     return () => {
-      if (containerRef.current) {
-        resizeObserver.unobserve(containerRef.current);
+      if (container) {
+        resizeObserver.unobserve(container);
       }
     };
-  }, [containerRef]);
+  }, []);
 
   return (
-    (<svg
+    <svg
       ref={containerRef}
       aria-hidden="true"
       className={cn(
@@ -123,7 +123,7 @@ export function GridPattern({
             strokeWidth="0" />
         ))}
       </svg>
-    </svg>)
+    </svg>
   );
 }
 
